@@ -10,6 +10,6 @@ spring:
     properties:
       dialect: org.hibernate.dialect.MySQL5Dialect
   thymeleaf:
-    enabled: false
+    enabled: true
     #cache: false
 

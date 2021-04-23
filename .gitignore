@@ -35,3 +35,4 @@ mvnw
 mvnw.cmd
 *.pdf
 .mvn/
+pom.xml
