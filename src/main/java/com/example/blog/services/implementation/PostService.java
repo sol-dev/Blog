@@ -37,4 +37,9 @@ public class PostService implements IPostService{
     public List<Post> findAllSorted(){
         return repository.findAllSorted();
     }
+
+    //patch
+    public void updatePost(Post post) {
+        repository.saveAndFlush(post);
+    }
 }

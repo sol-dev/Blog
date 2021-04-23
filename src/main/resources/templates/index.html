@@ -1,11 +1,46 @@
-<!DOCTYPE html>	
-<html xmlns:th="http://www.thymeleaf.org">		
-    <head>			
-        <meta charset="ISO-8859-1">			
-        <title>Insert title here</title>		
-    </head>		
-    
-    <body>			
-        <h1>Hello !</h1>	
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="ISO-8859-1">
+        <title>Blog | Home</title>
+        <!-- bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"-->
+    </head>
+
+    <body>
+      <header>
+        <nav>
+          <a href="http://localhost:8080/posts/home">Home </a>
+        </nav>
+      </header>
+
+      <section id="content">
+        <h1>Welcome !</h1>
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Titulo del post</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+                <!-- for each (variable post) de la lista (listaPosts) -> mismo nombre que variable en el controller
+            --> <tr th:each="post: ${post_list}">
+                    <td th:text="${post.id}"></td>
+                    <td th:text="${post.title}"></td>
+                    <td><button type="submit" formmethod="get" formaction="detail.html" class="btn btn-success">Detalles</button></td>
+                    <td><button type="button" class="btn btn-outline-info">Editar</button></td>
+                    <td><button type="button" class="btn btn-outline-danger">Eliminar</button></td>
+
+
+                </tr>
+
+            </tbody>
+          </table>
+      </section>
+
 	</body>
 </html>

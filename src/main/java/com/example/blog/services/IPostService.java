@@ -15,4 +15,7 @@ public interface IPostService {
     public List<Post> findAll();
 
     public List<Post> findAllSorted();
+    
+    //patch
+    public void updatePost(Post post);
 }
